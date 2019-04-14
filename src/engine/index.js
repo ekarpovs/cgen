@@ -3,7 +3,7 @@ const { qrToBuffer } = require('./qrc-generator')
 // const { openArchive, archiveData, closeArchive } = require('../dest/dest-zip')
 const { checkPath, saveData } = require('../dest/dest-dir')
 
-exports.generate = (amount, path, file) => {
+exports.generate = (amount, path) => {
   const t0 = new Date()
 
   console.log(`Will be generated ${amount} codes into "${path}"`)

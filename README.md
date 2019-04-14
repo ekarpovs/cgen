@@ -11,12 +11,11 @@
 
 * -a, --amount=amount  amount of codes
 * -p, --path=path      output path
-* -f, --file=file      output file
 * -h, --help           show CLI help
 * -v, --version        show CLI version
 
 ### EXAMPLE
 
   The command:
-  $ cgen -a=1000000 -p="./outputPath" -f="myCodes"
-  will create a myCodes.zip file in an outputDirectory within 1000000 png.
+  $ cgen -a=1000000 -p="./outputPath"
+  will create 1000000 png files within outputPath.

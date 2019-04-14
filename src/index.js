@@ -7,9 +7,8 @@ class CgenCommand extends Command {
     const { flags } = this.parse(CgenCommand)
     const amount = flags.amount || 10
     const path = flags.path || './tmp'
-    const file = flags.file || ''
 
-    generate(amount, path, file)
+    generate(amount, path)
   }
 }
 
@@ -26,8 +25,7 @@ CgenCommand.flags = {
   // add --help flag to show CLI version
   help: flags.help({ char: 'h' }),
   amount: flags.string({ char: 'a', description: 'amount of codes' }),
-  path: flags.string({ char: 'p', description: 'output path' }),
-  file: flags.string({ char: 'f', description: 'output file. If not defined output will be not compressed' })
+  path: flags.string({ char: 'p', description: 'output path' })
 }
 
 module.exports = CgenCommand
