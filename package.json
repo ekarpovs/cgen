@@ -1,0 +1,48 @@
+{
+  "name": "cgen",
+  "version": "1.0.0",
+  "author": "Evgeny Karpovsky @ekarpovs",
+  "bin": {
+    "cgen": "./bin/run"
+  },
+  "bugs": "https://github.com/ekarpovs/cgen/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.12",
+    "@oclif/config": "^1.12.12",
+    "@oclif/plugin-help": "^2.1.6",
+    "archiver": "^3.0.0",
+    "qr-image": "^3.2.0",
+    "uuid62": "^1.0.1"
+  },
+  "devDependencies": {
+    "@oclif/test": "^1.2.4",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.3.0",
+    "rimraf": "^2.6.3",
+    "standard": "^12.0.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/ekarpovs/cgen",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "cgen"
+  },
+  "repository": "ekarpovs/cgen",
+  "scripts": {
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "lint": "standard",
+    "lint-fx": "standard --fix",
+    "debug": "node --inspect-brk ./src/index.js"
+  }
+}
